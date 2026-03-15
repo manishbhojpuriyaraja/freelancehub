@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0.98 0.005 90;
+    --foreground: 0.18 0.02 240;
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.02 240;
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.02 240;
+    --primary: 0.52 0.14 172;
+    --primary-foreground: 0.98 0.005 90;
+    --secondary: 0.94 0.02 172;
+    --secondary-foreground: 0.35 0.1 172;
+    --muted: 0.94 0.008 90;
+    --muted-foreground: 0.52 0.02 240;
+    --accent: 0.76 0.14 72;
+    --accent-foreground: 0.18 0.02 240;
+    --destructive: 0.55 0.2 25;
+    --destructive-foreground: 0.98 0.005 90;
+    --border: 0.88 0.01 172;
+    --input: 0.88 0.01 172;
+    --ring: 0.52 0.14 172;
+    --radius: 0.75rem;
+    --chart-1: 0.52 0.14 172;
+    --chart-2: 0.76 0.14 72;
+    --chart-3: 0.65 0.18 142;
+    --chart-4: 0.62 0.16 200;
+    --chart-5: 0.72 0.12 50;
+    --sidebar: 0.96 0.01 172;
+    --sidebar-foreground: 0.18 0.02 240;
+    --sidebar-primary: 0.52 0.14 172;
+    --sidebar-primary-foreground: 0.98 0.005 90;
+    --sidebar-accent: 0.92 0.02 172;
+    --sidebar-accent-foreground: 0.35 0.1 172;
+    --sidebar-border: 0.88 0.01 172;
+    --sidebar-ring: 0.52 0.14 172;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: linear-gradient(
+      135deg,
+      oklch(0.52 0.14 172 / 0.08) 0%,
+      oklch(0.76 0.14 72 / 0.06) 100%
+    );
+  }
+  .gradient-card {
+    background: linear-gradient(
+      135deg,
+      oklch(1 0 0) 0%,
+      oklch(0.96 0.01 172) 100%
+    );
+  }
+  .text-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.52 0.14 172),
+      oklch(0.76 0.14 72)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
